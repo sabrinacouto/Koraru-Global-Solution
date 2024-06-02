@@ -4,9 +4,9 @@ import About from "./about/AboutUs";
 export default function Home() {
   return (
    <>
-   <div className="mt-10">
+   <section id ='sobre-nos' className="mt-10 font-montserrat">
    <About/>
-   </div>
+   </section>
    </>
   );
 }
