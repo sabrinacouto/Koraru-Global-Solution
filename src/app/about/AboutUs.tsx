@@ -28,11 +28,11 @@ const About: React.FC = () => {
     <Features/>
     </div>
 
-<div className="flex justify-center items-center p-[3rem] gap-10">
+<div className=" flex flex-col md:flex-row justify-center items-center p-1 md:p-[3rem] gap-10">
   <div>
-  <Image src = {aboutUs} alt = "Mergulhadora em um oceano repleto de corais" className="w-[500px] h-auto"/>
+  <Image src = {aboutUs} alt = "Mergulhadora em um oceano repleto de corais" className="w-[30rem] h-auto"/>
   </div>
-  <div className="w-[600px]">
+  <div className="w-[20rem] md:w-[40rem] ">
     <h2 className="font-bold text-7xl text-darkslategray-200">
       SOBRE NÓS
     </h2>
