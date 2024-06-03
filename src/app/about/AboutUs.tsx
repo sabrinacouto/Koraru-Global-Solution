@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logo from "../../../public/assets/logo.png";
-import aboutUs from "../../../public/assets/aboutUs.png";
+import aboutUs from "../../../public/assets/aboutUs.jpg";
 import Features from "@/components/Features/Features";
 const About: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const About: React.FC = () => {
               ŌRARU
             </h1>
                 <Image
-                className="h-[5rem] w-[5rem] absolute !m-[0] top-[-23px] left-[-53px] object-cover z-[1]"
+                className="h-[5.5rem] w-[5rem] absolute !m-[0] top-[-23px] left-[-53px] object-cover z-[1]"
                 alt="Logo da Koraru"
                 src={logo}
               />
@@ -30,14 +30,14 @@ const About: React.FC = () => {
 
 <div className=" flex flex-col md:flex-row justify-center items-center p-1 md:p-[3rem] gap-10">
   <div>
-  <Image src = {aboutUs} alt = "Mergulhadora em um oceano repleto de corais" className="w-[30rem] h-auto"/>
+  <Image src = {aboutUs} alt = "Mergulhadora em um oceano repleto de corais" className="w-[30rem] h-auto rounded-31xl"/>
   </div>
   <div className="w-[20rem] md:w-[40rem] ">
     <h2 className="font-bold text-7xl text-darkslategray-200">
       SOBRE NÓS
     </h2>
-    <div className=" w-[4rem] border-b-4 border-lightcoral mb-7">
-    </div>
+    <div className=" w-[4rem] border-b-4 border-lightcoral mb-7"/>
+    
   
   <p className=" text-base text-black mb-4">
                 A KŌRARU está comprometida em proteger e restaurar os recifes de
@@ -62,9 +62,6 @@ const About: React.FC = () => {
             </button>
   </div>
 </div>
-      
-
-    
     </>
   );
 };
