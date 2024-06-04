@@ -25,7 +25,7 @@ const Mission = () => {
                 <Image src={mission} alt="Tubarões ao lado de corais" className="rounded-31xl w-[30rem] h-[16rem]" />
             </div>
 
-    <div className="bg-[#FCFCFC] font-montserrat py-5 container max-w-full max-h-full">
+    <div className="bg-[#FCFCFC] font-montserrat p-5 container max-w-full max-h-full">
     <div className="flex flex-col md:flex-row items-start justify-center py-0 pr-5 pl-6">
         <div className="flex flex-col items-center justify-center">
             <h2 className="font-bold text-center text-7xl text-darkslategray-100">
@@ -35,7 +35,7 @@ const Mission = () => {
         </div>
     </div>
 
-    <div className="flex flex-col lg:flex-row items-start justify-center gap-[5rem] text-darkslategray-100  py-6">
+    <div className="flex flex-col lg:flex-row items-center justify-center gap-10 md:gap-[5rem] text-darkslategray-100 py-6">
         <div className="flex flex-col items-start justify-center gap-4">
             <h1 className="font-bold text-7xl">
                 Saúde dos corais
