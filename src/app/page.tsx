@@ -16,7 +16,7 @@ export default function Home() {
    <section id ='nossa-missao' className="mt-10 font-montserrat">
    <Mission/>
    </section>
-   <section id ='nossa-missao' className="mt-10 font-montserrat">
+   <section id ='equipe' className="mt-10 font-montserrat">
    <Equipe/>
    </section>
    </>

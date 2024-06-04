@@ -19,10 +19,10 @@ const Header: React.FC = () => {
                     <Image src={logo} alt="A letra K ao lado de dois corais" width={60} height={60} />
                 </div>
                 <nav className="hidden md:flex flex-1 justify-center space-x-6 text-darkslategray-100 font-montserrat">
-                    <Link href="#sobre-nos" className="text-base hover:text-mediumturquoise hover:underline">SOBRE NÓS</Link>
-                    <Link href="#servicos" className="text-base hover:text-mediumturquoise hover:underline">SERVIÇOS</Link>
-                    <Link href="#nossa-missao" className="text-base hover:text-mediumturquoise hover:underline">NOSSA MISSÃO</Link>
-                    <Link href="#equipe" className="text-base hover:text-mediumturquoise hover:underline">EQUIPE</Link>
+                    <Link href="/#sobre-nos" className="text-base hover:text-mediumturquoise hover:underline">SOBRE NÓS</Link>
+                    <Link href="/#servicos" className="text-base hover:text-mediumturquoise hover:underline">SERVIÇOS</Link>
+                    <Link href="/#nossa-missao" className="text-base hover:text-mediumturquoise hover:underline">NOSSA MISSÃO</Link>
+                    <Link href="/#equipe" className="text-base hover:text-mediumturquoise hover:underline">EQUIPE</Link>
                 </nav>
                 <div className="flex items-center space-x-4">
                     <Link href="/login" className="px-4 py-2 text-base text-mediumturquoise rounded-full hover:bg-mediumturquoise hover:text-white transition">Login</Link>
@@ -37,10 +37,10 @@ const Header: React.FC = () => {
                         onClick={() => setMenu(false)}
                         className="mb-8 text-2xl cursor-pointer"
                     />
-                    <Link href="#sobre-nos" className="text-bas">SOBRE NÓS</Link>
-                    <Link href="#servicos" className="text-base">SERVIÇOS</Link>
-                    <Link href="#nossa-missao" className="text-base">NOSSA MISSÃO</Link>
-                    <Link href="#equipe" className="text-base">EQUIPE</Link>
+                    <Link href="/#sobre-nos" className="text-bas">SOBRE NÓS</Link>
+                    <Link href="/#servicos" className="text-base">SERVIÇOS</Link>
+                    <Link href="/#nossa-missao" className="text-base">NOSSA MISSÃO</Link>
+                    <Link href="/#equipe" className="text-base">EQUIPE</Link>
                 </section>
             </div>
         </section>
