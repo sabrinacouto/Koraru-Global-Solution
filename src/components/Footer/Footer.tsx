@@ -1,8 +1,6 @@
 import logo from "../../../public/assets/logobranca.png"
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
@@ -25,12 +23,6 @@ const Footer = () =>{
               />
               </div>
               <div className="flex mt-5 space-x-4 text-gray-600">
-                <a className="hover:opacity-75" href="https://www.facebook.com/fiap/?locale=pt_BR" target="_blank" rel="noreferrer" title = "Facebook">
-                <FaFacebookSquare className="text-white text-7xl" />
-                </a>
-                <a className="hover:opacity-75" href="https://x.com/i/flow/login?redirect_after_login=%2Ffiap" target="_blank" rel="noreferrer" title="X">
-                <FaSquareXTwitter className="text-white text-7xl" />
-                </a>
                 <a className="hover:opacity-75" href="https://www.linkedin.com/school/fiap/posts/?feedView=all" target="_blank" rel="noreferrer"  title="Linkedin">
                   <IoLogoLinkedin className="text-white text-7xl" />
                 </a>
@@ -42,22 +34,8 @@ const Footer = () =>{
                 </a>
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-9 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-[3rem] lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
           
-              <div>
-                <p className="font-bold text-white">
-                Links
-                </p>
-                <nav className="flex flex-col mt-4 text-white">
-                <ul className="space-y-2">
-                  <li className="hover:opacity-75"><Link href="/#sobre-nos"> Sobre nós </Link></li>
-                  <li className="hover:opacity-75"><Link href="/#servicos"> Serviços </Link></li>
-                  <li className="hover:opacity-75"><Link href="/#nossa-missao"> Nossa missão</Link></li>
-                  <li className="hover:opacity-75"><Link href="/#equipe"> Equipe</Link></li>
-                 </ul>
-                </nav>
-              </div>
-              
               <div>
                 <p className="font-bold text-white">
                  Conheça outras iniciativas
@@ -84,9 +62,22 @@ const Footer = () =>{
                   
                 </nav>
               </div>
+              <div>
+                <p className="font-bold text-white">
+                Links
+                </p>
+                <nav className="flex flex-col mt-4 text-white">
+                <ul className="space-y-2">
+                  <li className="hover:opacity-75"><Link href="/#sobre-nos"> Sobre nós </Link></li>
+                  <li className="hover:opacity-75"><Link href="/#servicos"> Serviços </Link></li>
+                  <li className="hover:opacity-75"><Link href="/#nossa-missao"> Nossa missão</Link></li>
+                  <li className="hover:opacity-75"><Link href="/#equipe"> Equipe</Link></li>
+                 </ul>
+                </nav>
+              </div>
             </div>
           </div>
-          <h4 className="mt-5 text-white w-[19rem]">
+          <h4 className="text-white w-[19rem]">
           © { new Date().getFullYear()} - 
            <b> Kōraru </b> - Todos os direitos reservados
           </h4>
