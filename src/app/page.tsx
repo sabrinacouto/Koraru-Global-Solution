@@ -1,8 +1,8 @@
 import Image from "next/image";
-import About from "./about/AboutUs";
-import ServicesContent from "./serviços/ServicesContent";
-import Mission from "./mission/Mission";
-import Equipe from "./equipe/Equipe";
+import About from "./about/page";
+import ServicesContent from "./servicecontent/page";
+import Mission from "./mission/page";
+import Equipe from "./equipe/page";
 
 export default function Home() {
   return (

@@ -42,10 +42,10 @@ const Footer = () =>{
                 </p>
                 <nav className="flex flex-col mt-4 text-white">
                   <ul className="space-y-2 ">
-                    <li> <a className="hover:opacity-75" href="https://voiceoftheoceans.com/"> Vozes do Oceano </a></li>
-                    <li><a className="hover:opacity-75" href="https://oceanhero.today/pt" > Ocean Hero</a></li>
-                    <li><a className="hover:opacity-75" href="https://brasil.oceana.org/" > Oceana Brasil </a></li>
-                    <li><a className="hover:opacity-75" href="https://oceanfdn.org/pt/projetos/" > The Ocean Foundation </a></li>
+                    <li> <a className="hover:opacity-75" href="https://voiceoftheoceans.com/"  target="_blank" rel="noreferrer"> Vozes do Oceano </a></li>
+                    <li><a className="hover:opacity-75" href="https://oceanhero.today/pt"  target="_blank" rel="noreferrer"> Ocean Hero</a></li>
+                    <li><a className="hover:opacity-75" href="https://brasil.oceana.org/"  target="_blank" rel="noreferrer" > Oceana Brasil </a></li>
+                    <li><a className="hover:opacity-75" href="https://oceanfdn.org/pt/projetos/"  target="_blank" rel="noreferrer"> The Ocean Foundation </a></li>
                   </ul>
                 </nav>
               </div>
