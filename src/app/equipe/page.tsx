@@ -28,7 +28,7 @@ const Equipe = () =>{
             </div>
            
             <div className="flex flex-col justify-center items-center gap-2 border-2 rounded-3xl border-mediumturquoise h-[30rem] w-[20rem]">
-            <Image src= {Kevin} alt = "Desenvolvedora do site. Uma mulher de olhos e cabelos castanhos" className="w-[13rem] h-[14rem] rounded-[70%]" />
+            <Image src= {Kevin} alt = "Desenvolvedor do site. Um homem de olhos e cabelos castanhos" className="w-[13rem] h-[14rem] rounded-[70%]" />
                 <h2 className="text-darkslategray-100 font-bold">Kevin Nobre</h2>
                 <p className="text-lightcoral font-bold">RM: 552590</p>
                 <p className="text-darkslategray-100 font-bold text-center">Desenvolvedor Back-End Python</p>
