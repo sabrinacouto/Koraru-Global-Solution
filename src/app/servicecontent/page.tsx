@@ -7,7 +7,7 @@ import { PiMicroscopeFill } from "react-icons/pi";
 
 const ServicesContent = () => {
   return (
-    <div className="bg-[#FCFCFC] font-montserrat py-4">
+    <div className="bg-gray font-montserrat py-4">
       <div className="flex flex-row items-center justify-center py-0 px-5 box-border text-left text-13xl text-darkslategray-100 font-montserrat">
         <div className=" flex flex-col items-center justify-center gap-[33px] max-w-full mq750:gap-[16px]">
           <div className="self-stretch flex flex-col md:flex-row items-start justify-center py-0 pr-5 pl-[22px]">

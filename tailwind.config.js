@@ -18,6 +18,7 @@ module.exports = {
           slategray: {
             "100": "#52738c",
             "200": "#466379",
+            "300": "#B0B0B0",
           },
           gray: "#fcfcfc",
           black: "#000",
