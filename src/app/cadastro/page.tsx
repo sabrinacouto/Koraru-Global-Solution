@@ -15,7 +15,7 @@ const Cadastro = () => {
               ŌRARU
             </h1>
                 <Image
-                className="h-[5.5rem] w-[5rem] absolute !m-[0] top-[-27px] left-[-53px] object-cover z-[1]"
+                className="h-[4rem] w-[4rem] absolute !m-[0] top-[-9px] left-[-48px] object-cover z-[1]"
                 alt="Logo da Koraru"
                 src={logo}
               />

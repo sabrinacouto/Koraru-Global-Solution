@@ -16,7 +16,7 @@ const Header: React.FC = () => {
                         onClick={() => setMenu(true)}
                         className="text-3xl text-black cursor-pointer lg:hidden"
                     />
-                    <Image src={logo} alt="A letra K ao lado de dois corais" width={60} height={60} />
+                    <Image src={logo} alt="A letra K ao lado de dois corais" width={40} height={40} />
                 </div>
                 <nav className="hidden md:flex flex-1 justify-center space-x-6 text-darkslategray-100 font-montserrat">
                     <Link href="/#sobre-nos" className="text-base hover:text-mediumturquoise hover:underline">SOBRE NÓS</Link>
