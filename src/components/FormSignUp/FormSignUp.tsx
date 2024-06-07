@@ -6,22 +6,16 @@ import { Address } from "@/types/viaCepTypes";
 
 
 const FormSignUp = () => {
-  const [selectedOption, setSelectedOption] = useState(""); 
   const [confirmarSenha, setConfirmarSenha] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [successMessage, setSuccessMessage] = useState<string>('');
-
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedOption(event.target.value); 
-  };
-
   const [inputErrors, setInputErrors] = useState({
     nome: false,
     sobrenome: false,
     telefone: false,
     email: false,
     genero: false,
-    nacionalidade:false,
+    nacionalidade: false,
     cep: false,
     logradouro: false,
     especializacao: false,
@@ -32,7 +26,7 @@ const FormSignUp = () => {
     estado: false,
     senha: false,
     confirmarSenha: false
-});
+  });
 
   const [formData, setFormData] = useState({
     nome: "",
@@ -54,27 +48,35 @@ const FormSignUp = () => {
     confirmarSenha: "",
   });
 
-     // Função para lidar com a mudança no campo de confirmação de senha
-     const handleConfirmarSenhaChange = (event: ChangeEvent<HTMLInputElement>) => {
-      const { value } = event.target;
-      setFormData({
-        ...formData,
-        confirmarSenha: value
-      });
-    
+  const handleConfirmarSenhaChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      confirmarSenha: value
+    }));
+    setInputErrors((prevErrors) => ({
+      ...prevErrors,
+      confirmarSenha: formData.senha !== value
+    }));
   };
-
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    setFormData({
-      ...formData,
+    setFormData((prevFormData) => ({
+      ...prevFormData,
       [name]: value
-    });
-    setInputErrors(prevState => ({
-      ...prevState,
+    }));
+    setInputErrors((prevErrors) => ({
+      ...prevErrors,
       [name]: !value
-  }));
+    }));
+
+    if (name === "senha" || name === "confirmarSenha") {
+      setInputErrors((prevErrors) => ({
+        ...prevErrors,
+        confirmarSenha: formData.senha !== value
+      }));
+    }
   };
 
   const handleCepBlur = async () => {
@@ -98,19 +100,55 @@ const FormSignUp = () => {
       if (formData.senha !== formData.confirmarSenha) {
         setInputErrors({ ...inputErrors, confirmarSenha: true });
         console.error('As senhas não correspondem');
-        return; // Não prossegue com o envio do formulário se as senhas não correspondem
+        return;
       }
       // Aqui você pode chamar a função para cadastrar o profissional com os dados do formulário
       console.log("Dados a serem cadastrados:", formData);
-      // await cadastrarProfissional(formData);
+      await cadastrarProfissional(formData);
       console.log('Cadastro realizado com sucesso!');
-      // Faça o que for necessário após o cadastro, como redirecionar o usuário
+      setSuccessMessage('Cadastro realizado com sucesso!');
+      // Limpar os campos do formulário
+      setFormData({
+        nome: "",
+        sobrenome: "",
+        genero: "",
+        nacionalidade: "",
+        telefone: "",
+        email: "",
+        cep: "",
+        logradouro: "",
+        especializacao: "",
+        atuacao: "",
+        numero: "",
+        complemento: "",
+        bairro: "",
+        localidade: "",
+        estado: "",
+        senha: "",
+        confirmarSenha: "",
+      });
+      setInputErrors({
+        nome: false,
+        sobrenome: false,
+        telefone: false,
+        email: false,
+        genero: false,
+        nacionalidade: false,
+        cep: false,
+        logradouro: false,
+        especializacao: false,
+        atuacao: false,
+        numero: false,
+        bairro: false,
+        localidade: false,
+        estado: false,
+        senha: false,
+        confirmarSenha: false
+      });
     } catch (error) {
       console.error('Erro ao cadastrar:', error);
-      // Trate o erro conforme necessário
     }
   };
-  
 
   return (
 <form onSubmit={handleSubmit} className="shadow-lg rounded-3xl w-[19rem] lg:w-[30rem] bg-gradient-to-b from-[#466379] to-white px-7 pt-9">
@@ -134,21 +172,15 @@ const FormSignUp = () => {
         onChange={handleInputChange}
       />
       {inputErrors.sobrenome && <span className="text-red-500 text-xs ml-2">Campo obrigatório.</span>}
-     <div>
-            <select
-              className={`border-none outline-none bg-white h-8 shadow-lg rounded-lg w-full font-montserrat text-xs sm:text-sm placeholder-sm ${
-                selectedOption !== "" ? "text-black" : "text-[#4B5563] text-opacity-50 font-medium"
-              }`}
-              name="gender"
-              id="gender"
-              onChange={handleSelectChange} // Adiciona o evento onChange
-            >
-              <option value="">Gênero*</option>
-              <option value="masculino">Masculino</option>
-              <option value="feminino">Feminino</option>
-              <option value="prefiro_nao_dizer">Prefiro não dizer</option>
-            </select>
-            </div>
+      <input
+        className="border-none outline-none bg-white h-8 shadow-lg rounded-lg p-2 font-montserrat text-xs sm:text-sm text-darkgray placeholder-sm"
+        placeholder="Gênero*"
+        type="text"
+        name="genero"
+        value={formData.genero}
+        onChange={handleInputChange}
+      />
+    
             {inputErrors.genero && <span className="text-red-500 text-xs ml-2">Campo obrigatório.</span>}
       <input
         className="border-none outline-none bg-white h-8 shadow-lg rounded-lg p-2 font-montserrat text-xs sm:text-sm text-darkgray placeholder-sm"
@@ -294,10 +326,11 @@ const FormSignUp = () => {
         {inputErrors.confirmarSenha && <span className="text-red-500 text-xs ml-2">As senhas não correspondem.</span>}
      
     </div>
+    {successMessage && <div className="text-green-500">{successMessage}</div>}
     <button type="submit" className="border-none p-0 my-10 bg-[#002847] hover:bg-[#2D4D66] shadow-lg rounded-lg flex items-center justify-center py-2.5 px-7">
       <span className="font-montserrat text-xs sm:text-sm text-white">Confirmar cadastro</span>
     </button>
-    {successMessage && <div className="text-green-500">{successMessage}</div>}
+
   </div>
 </form>
 

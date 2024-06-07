@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import { FormData } from '@/types/formData';
 
 const api = axios.create({
@@ -9,13 +9,20 @@ const api = axios.create({
   }
 });
 
-export const cadastrarProfissional = async (formData: FormData) => { // Defina o tipo FormData aqui
+
+export const  cadastrarProfissional  = async (FormData: FormData) => {
   try {
-    const response = await api.post('/profissional', formData);
-    return response.data;
-  } catch (error) {
-    throw error;
+    // Enviando uma requisição POST para o endpoint '/contaCliente' com os dados da nova conta cliente
+    const response = await api.post('/profissional', FormData );
+    return response.data; // Retornando os dados da conta cliente criada
+  } catch (error: unknown) {
+    // Tratando erros da requisição
+    if (axios.isAxiosError(error)) {
+      // Se for um erro do axios, lançar um novo erro com a mensagem do erro original
+      throw new Error('Erro ao criar ContaCliente: ' + (error as AxiosError).message);
+    } else {
+      // Se for outro tipo de erro, lançar um novo erro com a mensagem do erro
+      throw new Error('Erro ao criar ContaCliente: ' + String(error));
+    }
   }
 };
-
-// Outros métodos da API podem ser adicionados aqui
