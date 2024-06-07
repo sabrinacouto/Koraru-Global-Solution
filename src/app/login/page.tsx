@@ -1,7 +1,41 @@
+'use client';
 import Link from 'next/link';
+import { useState } from 'react';
 import Image from 'next/image';
 import logo from "../../../public/assets/logo.png";
+import { loginUser } from '@/services/cadastroAPI/cadastroAPI';
+import { FormData } from '@/types/formData';
+
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+
+    try {
+      // Faz login do usuário com os dados fornecidos
+      const contaProfissional: FormData | null = await loginUser(email, password);
+
+      if (contaProfissional) {
+        // Login bem-sucedido
+        console.log('Login bem-sucedido', contaProfissional);
+        alert('Usuário logado com sucesso!');
+      } else {
+        // E-mail ou senha incorretos
+        setError('E-mail ou senha incorretos.');
+      }
+    } catch (error: unknown) {
+      // Tratamento de erros
+      setError('Erro ao fazer login: ' + String(error));
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <section id="login" className="background-image my-[5rem] bg-cover bg-center">
       <div className="flex justify-center items-center w-full mt-10">
@@ -13,7 +47,8 @@ const Login = () => {
           </div>
 
           <div className='px-10 md:px-20 py-9'>
-          <form className="space-y-10  ">
+          <form onSubmit={handleSubmit} className="space-y-10  ">
+          {error && <p className="text-red-500 text-center mb-6">{error}</p>}
             <div className="mb-6">
               <label htmlFor="email" className="block text-[#808080] text-lg mb-2 ml-2">E-mail <span className='text-lightcoral font-bold'>*</span></label>
               <input
@@ -24,6 +59,8 @@ const Login = () => {
                 title="E-mail"
                 placeholder="Digite seu email cadastrado"
                 autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -35,12 +72,14 @@ const Login = () => {
                 id="passwordInput"
                 placeholder="Digite sua senha"
                 title="Senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className=" border border-slategray-300 rounded-3xl py-2 px-3 w-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-[#0CBFE3]"
                 required
               />
             </div>
             <button type="submit" className="bg-lightcoral text-white hover:bg-slate-500 w-full py-2 font-semibold rounded-3xl transition duration-300">
-              Login
+            {loading ? 'Loading...' : 'Login'}
             </button>
             <div className='flex justify-center items-center'>
                 
