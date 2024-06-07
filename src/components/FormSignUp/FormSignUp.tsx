@@ -6,9 +6,9 @@ import { Address } from "@/types/viaCepTypes";
 
 
 const FormSignUp = () => {
-  const [confirmarSenha, setConfirmarSenha] = useState('');
-  const [passwordError, setPasswordError] = useState('');
+  // Estado para mensagem de sucesso
   const [successMessage, setSuccessMessage] = useState<string>('');
+  // Estado para erros nos campos de entrada
   const [inputErrors, setInputErrors] = useState({
     nome: false,
     sobrenome: false,
@@ -28,6 +28,7 @@ const FormSignUp = () => {
     confirmarSenha: false
   });
 
+// Estado para armazenar dados do formulário
   const [formData, setFormData] = useState({
     nome: "",
     sobrenome: "",
@@ -48,6 +49,7 @@ const FormSignUp = () => {
     confirmarSenha: "",
   });
 
+  // Função para lidar com a mudança na confirmação de senha
   const handleConfirmarSenhaChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
     setFormData((prevFormData) => ({
@@ -60,6 +62,7 @@ const FormSignUp = () => {
     }));
   };
 
+  // Função para lidar com a mudança nos campos de entrada
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({
@@ -70,7 +73,7 @@ const FormSignUp = () => {
       ...prevErrors,
       [name]: !value
     }));
-
+  // Verifica se o campo alterado é senha ou confirmação de senha
     if (name === "senha" || name === "confirmarSenha") {
       setInputErrors((prevErrors) => ({
         ...prevErrors,
@@ -79,6 +82,7 @@ const FormSignUp = () => {
     }
   };
 
+  // Função para lidar com o evento de desfoque do campo CEP
   const handleCepBlur = async () => {
     try {
       const addressData: Address = await fetchViaCep(formData.cep);
