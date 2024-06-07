@@ -43,7 +43,7 @@ const Login = () => {
         <Image src ={logo} alt = "Logoda empresa. Uma letra K azul envolta de corais" className=' w-[5rem] md:w-[8.5rem] pl-[1.7rem] md:pl-[4.5rem] mb-4'/>
         <div className='px-10 md:px-20'>
           <h2 className="text-7xl font-bold gradient mb-2">Login to your <span className='text-mediumturquoise'>account</span></h2>
-          <p className=' text-slategray-300'>Conecte-se em tempo real com o recife de corais.</p>
+          <p className=' text-slategray-300'>Conecte-se em tempo real com os recifes de coral.</p>
           </div>
 
           <div className='px-10 md:px-20 py-9'>
