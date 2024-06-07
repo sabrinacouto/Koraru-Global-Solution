@@ -13,7 +13,7 @@ const Mission = () => {
                     </h1>
                     <div className="w-16 border-b-4 border-lightcoral mb-7" />
                     <p className="text-base text-black w-auto lg:w-[35rem]">
-                        A missão da KŌRARU é proteger e restaurar os recifes de coral,
+                        A missão do KŌRARU é proteger e restaurar os recifes de coral,
                         fundamentais para a saúde dos oceanos e do planeta. Utilizamos
                         tecnologia de ponta para monitorar e identificar ameaças aos
                         recifes, implementando soluções inovadoras de restauração e manejo

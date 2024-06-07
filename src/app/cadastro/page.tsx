@@ -23,7 +23,7 @@ const Cadastro = () => {
           </div>
           <div className=" text-5xl text-black">
             <h2 className="m-0 text-lightcoral font-bold w-auto md:w-[30rem]">
-                Ao se cadastrar na Kōraru, sua empresa terá:
+                Ao se cadastrar no Kōraru, sua empresa terá:
             </h2>
           </div>
           <div className=" flex flex-col gap-6 mt-5">

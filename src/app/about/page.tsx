@@ -40,7 +40,7 @@ const About: React.FC = () => {
     
   
   <p className=" text-base text-black mb-4">
-                A KŌRARU está comprometida em proteger e restaurar os recifes de
+                O KŌRARU está comprometida em proteger e restaurar os recifes de
                 coral, essenciais para a saúde dos oceanos e da vida marinha.
                 Utilizamos tecnologia de ponta, como sensores subaquáticos e
                 dispositivos IoT, para monitorar continuamente a saúde dos
