@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "../../../public/assets/logo.png";
+import Link from "next/link";
 import aboutUs from "../../../public/assets/aboutUs.jpg";
 import Features from "@/components/Features/Features";
 const About: React.FC = () => {
@@ -56,9 +57,9 @@ const About: React.FC = () => {
               </p>
               <button className="cursor-pointer [border:none] py-1.5 px-4 bg-darkslategray-200 w-[134px] rounded-61xl flex flex-row items-start justify-start box-border whitespace-nowrap hover:bg-slategray-100">
               <div className="h-8 w-[134px] relative rounded-61xl bg-darkslategray-200 hidden" />
-              <div className="relative text-base font-medium font-montserrat text-white text-left inline-block min-w-[88px] z-[1]">
+              <Link href="/#nossa-missao" className="text-base"><div className="relative text-base font-medium font-montserrat text-white text-left inline-block min-w-[88px] z-[1]">
                 Saiba mais
-              </div>
+              </div></Link>
             </button>
   </div>
 </div>
