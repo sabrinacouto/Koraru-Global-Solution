@@ -1,6 +1,6 @@
 ## ✨ Sobre
 
-Projeto desenvolvido para a Global Solution da FIAP.
+Projeto elaborado por estudantes do segundo semestre do curso de Análise e Desenvolvimento de Sistemas na FIAP, com o objetivo de contribuir para a proposta de solução na Global Solution.
 
 KŌRARU tem como objetivo principal cuidar da saúde dos recifes de coral e dos ecossistemas marinhos, proporcionando monitoramento em tempo real, conscientização pública e ferramentas inovadoras para restauração e conservação dos oceanos.
 
