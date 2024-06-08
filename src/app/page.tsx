@@ -3,6 +3,7 @@ import About from "./about/page";
 import ServicesContent from "./servicecontent/page";
 import Mission from "./mission/page";
 import Equipe from "./equipe/page";
+import Dashboard from "./dashboard/page";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
    <section id ='equipe' className="mt-10 font-montserrat">
    <Equipe/>
    </section>
+   <Dashboard />
+ 
    </>
   );
 }

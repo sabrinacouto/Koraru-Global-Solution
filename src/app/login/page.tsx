@@ -1,7 +1,7 @@
-'use client';
-import Link from 'next/link';
+'use client'
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import logo from "../../../public/assets/logo.png";
 import { loginUser } from '@/services/cadastroAPI/cadastroAPI';
 import { FormData } from '@/types/formData';
@@ -24,7 +24,8 @@ const Login = () => {
       if (contaProfissional) {
         // Login bem-sucedido
         console.log('Login bem-sucedido', contaProfissional);
-        alert('Usuário logado com sucesso!');
+        // Redireciona para a página de dashboard após o login bem-sucedido
+        window.location.href = '/dashboard';
       } else {
         // E-mail ou senha incorretos
         setError('E-mail ou senha incorretos.');
@@ -36,6 +37,8 @@ const Login = () => {
       setLoading(false);
     }
   };
+
+
   return (
     <section id="login" className="background-image my-[5rem] bg-cover bg-center">
       <div className="flex justify-center items-center w-full mt-10">

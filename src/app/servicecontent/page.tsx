@@ -20,7 +20,7 @@ const ServicesContent = () => {
             </div>
           </div>
           <h1 className=" text-inherit font-bold z-[1] mq450:text-lgi mq750:text-7xl">
-            <span>Conheça os serviços da</span>
+            <span>Conheça os serviços do</span>
             <span className="text-lightcoral">{` Kōraru `}</span>
           </h1>
         </div>

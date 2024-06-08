@@ -1,5 +1,5 @@
-
-export interface FormData {
+export interface Profissional {
+    id: number,
     nome: string;
     sobrenome: string;
     genero: string;
@@ -16,6 +16,4 @@ export interface FormData {
     localidade: string;
     estado: string;
     senha: string;
-    confirmarSenha: string;
-  }
-  
+}

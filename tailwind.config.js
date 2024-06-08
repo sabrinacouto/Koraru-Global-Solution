@@ -39,6 +39,7 @@ module.exports = {
         base: "16px",
         "13xl": "32px",
         "15xl": "40px",
+        "50xl": "10rem",
         lgi: "19px",
         "7xl": "26px",
         "5xl": "24px",

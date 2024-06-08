@@ -55,9 +55,9 @@ const Footer = () =>{
                 </p>
                 <nav className="flex flex-col mt-4  text-white">
                  <ul className="space-y-2">
-                  <li className="hover:opacity-75">Juliana Mo. - RM 554113</li>
-                  <li className="hover:opacity-75">Kevin Nobre - RM 552590</li>
-                  <li className="hover:opacity-75">Sabrina Couto - RM 552728</li>
+                  <li className="hover:opacity-75">Juliana Moreira da Silva - RM 554113</li>
+                  <li className="hover:opacity-75">Kevin Christian Nobre - RM 552590</li>
+                  <li className="hover:opacity-75">Sabrina do Couto X. Lima - RM 552728</li>
                  </ul>
                   
                 </nav>
