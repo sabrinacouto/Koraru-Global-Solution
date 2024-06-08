@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { FormData } from '@/types/formData';
-import { Profissional } from '@/types/Profisisonal';
+import { Profissional } from '@/types/Profissional';
 
 /**
  * Função para excluir um cliente.

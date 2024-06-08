@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { getAllProfissionais, deleteProfissional, updateProfissional } from '@/services/cadastroAPI/cadastroAPI';
-import { Profissional } from '@/types/Profisisonal';
+import { Profissional } from '@/types/Profissional';
 
 const ProfissionaisTable = () => {
   const [profissionais, setProfissionais] = useState<Profissional[]>([]);
