@@ -31,9 +31,20 @@ Inicie o servidor
   npm run dev
 ```
 
-
 ### Vercel
 
 Ou você pode testar nossa aplicação no link:
 
 https://koraru.vercel.app/
+
+###👩‍💻 Link Youtube 
+
+https://youtu.be/KqSfaqtg6dk
+
+## 💬 Repositório da API:
+
+https://github.com/julianamo93/Koraru-API
+
+
+
+
